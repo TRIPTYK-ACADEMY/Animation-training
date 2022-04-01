@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    background-color: rgb(25,24,39);
+}
+section{
+    perspective: 1900px;
+}
+.scrum{
+    width: 650px;
+    height: 650px;
+    position: relative;
+    transform: rotate3d(-1,3,-2,-68deg) rotateZ(-25deg);
+}
+.scrum:after{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(./img/scrum3.svg);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+span{
+    background: url(./img/scrum.svg);
+    display: block;
+    width: 100%;
+    height: 100%;
+    animation:  amazing 60s linear infinite;
+
+}
+
+span:before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url(./img/scrum2.svg);
+    animation:  amazing 40s linear infinite reverse;
+}
+
+@keyframes amazing{
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

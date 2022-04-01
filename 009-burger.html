@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+</head>
+<body>
+    <style>
+        /* body{
+            margin:0;
+            overflow:hidden;
+        }
+       
+       ul{
+           margin:0;
+           padding:0;
+           list-style: none;
+           display: flex;
+           flex-direction: column;
+           background: #13131b;
+           position:absolute;
+           top:50px;
+           width:0;
+           height:calc(100vh - 50px);  
+           transition: .5s; 
+           overflow:hidden;
+           border-radius: 3px;
+           box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+       }
+       ul.opened{
+        width:250px;
+       }
+       ul a{
+        display: block;
+        padding:5px 7px 5px 30px; 
+        margin-bottom:1px;
+        color:#534141;
+        text-decoration: none;   
+        position: relative;  
+        color:red;
+        font-size:20px;
+        line-height:60px;         
+        border-bottom:1px solid red;  
+        white-space: nowrap;
+       }
+       div{
+            margin:20px;
+        }
+        p{
+        line-height:1.8rem;
+        font-size:18px;
+        }
+        .burgerIcon{
+            width:24px;
+            height:18px;
+            position:relative; 
+        }
+        .burgerIcon:after,.burgerIcon:before,.burgerIcon a{
+            content:'';
+            display:block;
+            width:100%;
+            height:4px;
+            background: rgb(0, 0, 0);
+            position: absolute;
+            left:0;
+            transition:.5s;
+          
+        }
+        .burgerIcon:before{          
+            top:0;
+            transform-origin: top left;
+        }
+        .burgerIcon:after{
+            bottom:0;
+            transform-origin: bottom left;
+        }
+        .burgerIcon a{
+            top:7px;
+        }
+
+        .burgerIcon.close a{
+            width:0;
+            left:50%;
+        }
+        .burgerIcon.close:before{
+            left:4px;
+            transform:rotate(45deg);
+        }
+        .burgerIcon.close:after{
+            left:4px;
+            bottom:-2px;
+            transform:rotate(-45deg);
+        } */
+
+
+
+        body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29, 27, 35);
+    position: absolute;
+    top: 60px;
+    width: 0px;
+    height: calc(100vh - 50px);
+    transition: .5s;
+    border-radius: 0px 5px;
+    overflow: hidden;
+}
+
+ul a {
+    display: block;
+    text-decoration: none;
+    color: red;
+    padding: 5px 20px;
+    font-size: 20px;
+    line-height: 60px;
+    border-bottom: 1px solid red;
+    white-space: nowrap;
+}
+
+div {
+    margin: 30px 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+ul.opened{
+    width: 200px;
+}
+
+#burger{
+    position: relative;
+    margin-top: 20px;
+    height: 25px;
+    width: 30px;
+}
+
+#burger:after{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    top: 0;
+    transform: rotate(0);
+    transition: .5s;
+    transition-delay: .1s;
+}
+
+#burger:before{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    bottom: 0;
+    transform: rotate(0);
+    transition: .5s;
+    transition-delay: .1s;
+}
+
+#burger a{
+    content: "";
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    transform: translateY(-50%);
+    top: 50%;
+    opacity: 100%;
+    transition: .5s;
+    
+}
+
+
+
+
+#burger.close:after{
+    transform: rotate(45deg);
+    top: 11px;
+}
+
+#burger.close:before{
+    transform: rotate(-45deg);
+    bottom: 11px;
+}
+
+#burger.close a{
+   
+    opacity: 0;
+}
+    </style>
+    <div id="burger" class="burgerIcon ">
+        <a href="#" ></a>
+    </div>
+    <ul id="menu">
+        <li><a href="#">Item 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <li><a href="#">Item 4</a></li>
+        <li><a href="#">Item 5</a></li>
+    </ul>
+    <div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+</div>
+
+    <div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+</div>
+<script>
+    let btn = document.getElementById("burger");
+    let menu = document.getElementById("menu");
+    btn.addEventListener("click",openMenu);
+    function openMenu(){
+       menu.classList.toggle("opened");
+       btn.classList.toggle("close");
+    }
+</script>
+</body>
+</html>

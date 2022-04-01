@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+}
+#circle{
+    width:300px;
+    height:300px;
+    background:rgb(124, 124, 124);
+    border-radius:50%; 
+    overflow: hidden;    
+    transform:scale(0);
+    animation:.8s popout forwards cubic-bezier(.14,2.12,.79,1.14); 
+}
+iframe{
+    max-width:100%;
+}
+@keyframes popout{
+    from{
+        transform:scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,40 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: burlywood;
+    width: 250px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.big{
+    width: 100px;
+    height: 100px;
+    border:  3px solid chartreuse;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.small {
+    width: 65px;
+    height: 65px;
+    border: 3px solid chartreuse;
+    transition: 2s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transform: rotate(45deg);
+}
+
+.container:hover .big {
+    transform: rotate(1080deg);
+}
+.container:hover .small{
+    transform: rotate(1125deg);
+}

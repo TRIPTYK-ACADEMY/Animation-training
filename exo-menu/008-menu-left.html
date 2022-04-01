@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transitions</title>
+</head>
+<body>
+    <style>
+        /* body{
+            margin:0;
+            overflow:hidden;
+        }
+       
+       ul{
+           margin:0;
+           padding:0;
+           list-style: none;
+           display: flex;
+           flex-direction: column;
+           background: #13131b;
+           position:absolute;
+           top:50px;
+           width:0;
+           height:calc(100vh - 50px);  
+           transition: .5s; 
+           overflow:hidden;
+           border-radius: 3px;
+           box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+              
+   
+       }
+       ul.opened{
+        width:250px;
+       }
+       ul a{
+        display: block;
+        padding:5px 7px 5px 30px; 
+        margin-bottom:1px;
+        color:#534141;
+        text-decoration: none;   
+        position: relative;  
+        color:red;
+        font-size:20px;
+        line-height:60px;         
+        border-bottom:1px solid red;  
+        white-space: nowrap;
+       }
+       div{
+            margin:20px;
+        }
+        p{
+        line-height:1.8rem;
+        font-size:18px;
+        }
+
+         */
+
+         body {
+    margin: 0;
+    overflow: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(29, 27, 35);
+    position: absolute;
+    top: 50px;
+    width: 0px;
+    height: calc(100vh - 50px);
+    transition: .5s;
+    border-radius: 0px 5px;
+    overflow: hidden;
+}
+
+ul a {
+    display: block;
+    text-decoration: none;
+    color: red;
+    padding: 5px 20px;
+    font-size: 20px;
+    line-height: 60px;
+    border-bottom: 1px solid red;
+}
+
+div {
+    margin: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+ul.opened{
+    width: 200px;
+}
+
+    </style>
+    <div id="burger">
+        <a href="#" >Menu</a>
+    </div>
+    <ul id="menu">
+        <li><a href="#">azaz 1</a></li>
+        <li><a href="#">Item 2</a></li>
+        <li><a href="#">Item 3</a></li>
+        <li><a href="#">Item 4</a></li>
+        <li><a href="#">Item 5</a></li>
+    </ul>
+    <div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+</div>
+
+    <div>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad eaque error, architecto quo veniam illo illum expedita nam laboriosam! Ipsum fuga doloremque quasi. Rem quae asperiores quod sapiente sunt reprehenderit.</p>
+</div>
+<script>
+    let btn = document.getElementById("burger");
+    let menu = document.getElementById("menu");
+    btn.addEventListener("click",openMenu);
+    function openMenu(){
+       menu.classList.toggle("opened");
+    }
+</script>
+</body>
+</html>

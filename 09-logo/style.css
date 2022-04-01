@@ -1,0 +1,49 @@
+body{
+    margin: 0;
+    background: url(./paysage.jpg) center center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    display: block;
+    text-decoration: none;
+    color: white;
+    font-size: 60px;
+    position: fixed;
+    margin-left: 50px;
+}
+
+a span {
+    display: block;
+    position: relative;
+    transition: .5s ease-in-out;
+}
+a span:last-of-type{
+    font-style: italic;
+    left: 50px;
+    top: -25px;
+}
+a em {
+    font-style: normal;
+    transition: .5s ease-in-out;
+}
+div{
+    padding-top: 120px;
+}
+p{
+    color: white;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.fixed em {
+    opacity: 0;
+}
+.fixed span {
+    font-size: 40px;
+}
+
+.fixed a span:last-of-type{
+    left: 10px;
+}

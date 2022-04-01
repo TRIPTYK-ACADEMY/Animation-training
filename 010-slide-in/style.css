@@ -1,0 +1,25 @@
+body{
+    overflow-x: hidden;
+}
+div{
+    width:250px;
+    height:250px;
+    background:rgb(110, 221, 178);
+    padding:30px;
+    font-family:sans-serif;    
+    position: absolute;
+    animation-name:slideLeft;
+    animation-duration: 3s;
+    
+
+}
+@keyframes slideLeft{
+    from{
+        margin-left:100%;
+        opacity:0;
+    }
+    to{
+        margin-left:0;
+        opacity:1;
+    }
+}

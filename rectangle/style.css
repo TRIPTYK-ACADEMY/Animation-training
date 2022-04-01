@@ -1,0 +1,39 @@
+body{
+    background: rgb(25, 24, 39);
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    align-items: center;
+}
+.square{
+    position:relative;    
+    perspective: 1600px;
+}
+span{
+    display:block;
+    width:350px;
+    height:500px;
+    transition: .5s ease-in-out;
+    transform:rotate3d(1,-2,1,78deg) rotateX(15deg) rotateY(2deg) rotateZ(-23deg)
+}
+.intCode{
+    background: #c27126;    
+    position: absolute;
+    top:0;
+}
+.intHtml{
+    background: #a7d8d4;
+    position: absolute;
+    top:0;
+}
+.intCss{
+    background: #cc4743;
+    position: absolute;
+    top:0;
+}
+.square:hover .intHtml{
+    top:-40px;
+}
+.square:hover .intCss{
+    top:-120px;
+}
